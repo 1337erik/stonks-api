@@ -13,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get( '/', function () {
+    // lol maybe just redirect back to the front-end
 
-Auth::routes();
+    return view( 'welcome' );
+})->name( 'homebase' );
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post( 'login', 'Auth\LoginController@login' );
+Route::post( 'logout', 'Auth\LoginController@logout' );
+Route::post( 'password/confirm', 'Auth\ConfirmPasswordController@confirm' );
+Route::get( 'password/confirm', 'Auth\ConfirmPasswordController@showConfirmForm' );
+Route::post( 'password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail' );
+Route::post( 'password/reset', 'Auth\ResetPasswordController@reset' );
+Route::get( 'password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm' );
+Route::get( 'password/reset/{token}', 'Auth\ResetPasswordController@showResetForm' );
+Route::post( 'register', 'Auth\RegisterController@register' );
