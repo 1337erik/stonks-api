@@ -17,7 +17,6 @@
                 <li class="nav-item"><a href="#coaches" class="nav-link">Coaches</a></li>
                 <li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
                 <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#testimonies" class="nav-link">Testimonies</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
                 <li class="nav-item active"><a href="{{ config( 'app.ui_url' ) }}" class="nav-link">Our App</a></li>
             </ul>
