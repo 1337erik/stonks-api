@@ -2,6 +2,20 @@
 
 @section( 'content' )
 
+<a id="bgndVideo" class="player"
+data-property="{videoURL:'http://youtu.be/7lutvYTZk8E',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt: 36, opacity:1}">
+</a>
+
+<div class="intro-section" id="home-section" style="background-color: #ccc;">
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+      <h1>Welcome To Gymer</h1>
+    </div>
+  </div>
+</div>
+</div>
+
 <section class="home-slider js-fullheight owl-carousel ftco-degree-bottom">
     <div class="slider-item js-fullheight" style="background-image: url(images/bg_1.jpg);">
         <div class="overlay"></div>

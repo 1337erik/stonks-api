@@ -312,7 +312,11 @@
 	$('.appointment_time').timepicker();
 
 
-
+	$(function () {
+		$("#bgndVideo").YTPlayer();
+	});
 
 })(jQuery);
+
+
 
