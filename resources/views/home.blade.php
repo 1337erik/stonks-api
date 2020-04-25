@@ -14,8 +14,8 @@
             <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
 
                 <h1>Upgrade You</h1>
-                <a href="#peniletransplants"><button class="btn btn-primary btn-lg" type="button">Start your free trial</button></a>
-                <h2 class="mt-4 text-white">Fitness | Nutrition | Lifestyle</h2>
+                <a href="#peniletransplants"><button class="btn btn-primary btn-lg" type="button">Start your Free Quarantine Trial</button></a>
+                <h2 class="mt-4 text-white">Fitness | Nutrition | Biohacking | Lifestyle</h2>
             </div>
         </div>
     </div>
