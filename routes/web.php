@@ -13,12 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get( '/', function () {
-    // lol maybe just redirect back to the front-end
+Route::get( '/', 'HomeController@index' )->name( 'homebase' );
 
-    return view( 'welcome' );
-})->name( 'homebase' );
-
+// Auth::routes();
 Route::post( 'login', 'Auth\LoginController@login' );
 Route::post( 'logout', 'Auth\LoginController@logout' );
 Route::post( 'password/confirm', 'Auth\ConfirmPasswordController@confirm' );
