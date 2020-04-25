@@ -62,7 +62,7 @@
 {{-- End Slider --}}
 
 {{-- What we do section --}}
-<section class="ftco-section-services ftco-degree">
+<section class="ftco-section-services ftco-degree" id="about">
 
     <div class="container">
 
@@ -227,7 +227,7 @@
 {{-- End Half-video section --}}
 
 {{-- Our Coaches section --}}
-<section class="ftco-section bg-light" id="">
+<section class="ftco-section bg-light" id="coaches">
 
     <div class="container-fluid">
 
@@ -330,8 +330,8 @@
 </section>
 {{-- End our coaches section --}}
 
-{{-- Our classes section --}}
-<section class="ftco-section">
+{{-- Our programs section --}}
+<section class="ftco-section" id="programs">
 
     <div class="container-fluid">
 
@@ -417,10 +417,10 @@
         </div>
     </div>
 </section>
-{{-- end of our classes section --}}
+{{-- end of our programs section --}}
 
 {{-- Pricing Section --}}
-<section class="ftco-section bg-light">
+<section class="ftco-section bg-light" id="pricing">
 
     <div class="container">
 
@@ -509,7 +509,7 @@
 {{-- End Pricing Section --}}
 
 {{-- Testimony sections --}}
-<section class="ftco-section testimony-section">
+<section class="ftco-section testimony-section" id="testimonies">
 
     <div class="container">
 
@@ -668,7 +668,7 @@
 </section>
 {{-- End testimony Section --}}
 
-{{-- Blog Section --}}
+{{-- Blog Section 
 <section class="ftco-section bg-light">
 
     <div class="container">
@@ -752,10 +752,10 @@
         </div>
     </div>
 </section>
-{{-- End Blog Section --}}
+ End Blog Section --}}
 
 {{-- Contact Us Section --}}
-<section class="ftco-appointment">
+<section class="ftco-appointment" id="contact">
         <div class="overlay"></div>
     <div class="container-wrap">
         <div class="row no-gutters d-md-flex align-items-center">
