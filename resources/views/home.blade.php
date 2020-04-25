@@ -14,7 +14,7 @@
             <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
 
                 <h1>Upgrade You</h1>
-                <a href="#peniletransplants"><button class="btn btn-primary btn-lg" type="button">Start your Free Quarantine Trial</button></a>
+                <a href="#peniletransplants"><button class="btn btn-primary" style="font-size: 1.25rem" type="button">Start your Free Quarantine Trial</button></a>
                 <h2 class="mt-4 text-white">Fitness | Nutrition | Biohacking | Lifestyle</h2>
             </div>
         </div>
@@ -70,7 +70,7 @@
 
             <div class="col-xl-6 d-flex align-self-stretch">
 
-                <div class="align-self-stretch"><img src="images/about.jpg" class="img-fluid" alt=""></div>
+                <div class="align-self-stretch"><img src="images/about.jpg" class="img-fluid" style="top: 15px; position: relative;" alt=""></div>
             </div>
 
             <div class="col-xl-6 align-self-stretch pt-5">
@@ -80,7 +80,7 @@
                     <div class="col-md-12 heading-section ftco-animate">
 
                         <h3 class="subheading">Shape Your Body</h3>
-                        <h2 class="mb-4">What We Do?</h2>
+                        <h2 class="mb-4">This is Your Quarantine Evolution</h2>
                     </div>
                 </div>
                 <div class="services d-flex ftco-animate">
@@ -92,7 +92,7 @@
                     <div class="text ml-5">
 
                         <h3>Analyze Your Goal</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p>Build your profile with your own specific goals, our programs adapt to what you want them to be! Set your goals and your level</p>
                     </div>
                 </div>
                 <div class="services d-flex ftco-animate">
@@ -104,7 +104,7 @@
                     <div class="text ml-5">
 
                         <h3>Work Hard On It</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p>We offer a lot of programs for our DIY savvy people, and we also connect you to trainers and nutritionists for hands-on work!</p>
                     </div>
                 </div>
                 <div class="services d-flex ftco-animate">
@@ -116,7 +116,7 @@
                     <div class="text ml-5">
 
                         <h3>Improve Your Performance</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p>Track your progress and work with trainers and nutritionists to understand how to progress naturally towards your dream body</p>
                     </div>
                 </div>
                 <div class="services d-flex ftco-animate">
@@ -128,7 +128,7 @@
                     <div class="text ml-5">
 
                         <h3>Achieve Your Perfect Body</h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p>Actualize your potential, bring out your final form! Love who you are and fall in love with feeling the best you've ever felt</p>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
 
                             <div class="text">
 
-                                <strong class="number" data-number="5000">0</strong>
+                                <strong class="number" data-number="678">0</strong>
                                 <span>Happy Customers</span>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
 
                             <div class="text">
 
-                                <strong class="number" data-number="4560">0</strong>
+                                <strong class="number" data-number="459">0</strong>
                                 <span>Perfect Bodies</span>
                             </div>
                         </div>
@@ -178,7 +178,7 @@
 
                             <div class="text">
 
-                                <strong class="number" data-number="570">0</strong>
+                                <strong class="number" data-number="915">0</strong>
                                 <span>Working Hours</span>
                             </div>
                         </div>
@@ -189,8 +189,8 @@
 
                             <div class="text">
 
-                                <strong class="number" data-number="900">0</strong>
-                                <span>Success Stories</span>
+                                <strong class="number" data-number="1000">0</strong>
+                                <span>Ways Forward</span>
                             </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
 </section>
 {{-- End metrics section --}}
 
-{{-- Half-video section --}}
+{{-- Half-video section -- HIDE FOR NOW until I get a promo video
 <section class="ftco-about d-md-flex bg-light">
 
     <div class="one-half img" style="background-image: url(images/about-2.jpg);">
@@ -215,7 +215,7 @@
 
         <div class="heading-section ftco-animate">
 
-            <h3 class="subheading">About Muscle</h3>
+            <h3 class="subheading">About MetaLevel</h3>
             <h2 class="mb-5">Welcome <br>To Our Gym</h2>
         </div>
         <div>
@@ -224,7 +224,7 @@
         </div>
     </div>
 </section>
-{{-- End Half-video section --}}
+ End Half-video section --}}
 
 {{-- Our Coaches section --}}
 <section class="ftco-section bg-light" id="coaches">
@@ -235,55 +235,55 @@
 
             <div class="col-md-7 heading-section text-center ftco-animate">
 
-                <h3 class="subheading">Shape Your Body</h3>
+                <h3 class="subheading">Live on a Meta Level</h3>
                 <h2 class="mb-1">Our Coaches</h2>
             </div>
         </div>
         <div class="row">
 
-            <div class="col-lg-3 d-flex">
+            <div class="offset-lg-1 col-lg-3 d-flex">
 
                 <div class="coach align-items-stretch">
 
-                    <div class="img" style="background-image: url(images/trainer-1.jpg);"></div>
+                    <div class="img" style="background-image: url(images/diana1.png);"></div>
 
                     <div class="text bg-white p-4 ftco-animate">
 
-                        <span class="subheading">Owner / Head Coach</span>
-                        <h3><a href="#">Mark Brook</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <span class="subheading">Trainer / Nutritionist</span>
+                        <h3>Diana Maybrook</h3>
+                        <p>Diana is a former NPC bikini competitor, and now she owns the first Biohacking Concept gym in Boca Raton, Fl. She is also a qualified Nutiritionist and does remote training.</p>
                         <ul class="ftco-social-media d-flex mt-4">
 
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                            {{-- <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li> --}}
+                            <li class="ftco-animate"><a href="https://www.instagram.com/dianamaybrook/" class="mr-2 d-flex justify-content-center align-items-center" target="_blank"><span class="icon-instagram"></span></a></li>
                         </ul>
                         <p></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 d-flex">
+            <div class="offset-lg-1 col-lg-3 d-flex">
 
                 <div class="coach d-md-flex flex-column-reverse align-items-stretch">
 
-                    <div class="img" style="background-image: url(images/trainer-2.jpg);"></div>
+                    <div class="img" style="background-image: url(images/carsten2.png);"></div>
 
                     <div class="text bg-white p-4 ftco-animate">
 
-                        <span class="subheading">Owner / Head Coach</span>
-                        <h3><a href="#">Sarah Henderson</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <span class="subheading">Trainer / Nutritionist</span>
+                        <h3>Carsten Gauslow</h3>
+                        <p>Carsten is a bodybuilder in South Florida who builds custom nutritional programs for his clients, and hosts remote training sessions. Carsten believes Quarantine is an opportunity to develop yourself.</p>
                         <ul class="ftco-social-media d-flex mt-4">
 
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                            {{-- <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li> --}}
+                            <li class="ftco-animate"><a href="https://www.instagram.com/carsten_gauslow/" class="mr-2 d-flex justify-content-center align-items-center" target="_blank"><span class="icon-instagram"></span></a></li>
                         </ul>
                         <p></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 d-flex">
+            <div class="offset-lg-1 col-lg-3 d-flex">
 
                 <div class="coach align-items-stretch">
 
@@ -291,20 +291,20 @@
 
                     <div class="text bg-white p-4 ftco-animate">
 
-                        <span class="subheading">Owner / Head Coach</span>
-                        <h3><a href="#">George Hump</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <span class="subheading">Open Positions</span>
+                        <h3><a href="#">Possibly You?</a></h3>
+                        <p>MetaLevel is always looking for coaches to expand our capacity to reach greater audiences. We provide you a platform to build a following and to build a name for yourself.</p>
                         <ul class="ftco-social-media d-flex mt-4">
 
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
+                            {{-- <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
                             <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li> --}}
                         </ul>
                         <p></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 d-flex">
+            {{-- <div class="col-lg-3 d-flex">
 
                 <div class="coach d-md-flex flex-column-reverse align-items-stretch">
 
@@ -324,7 +324,7 @@
                         <p></p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
