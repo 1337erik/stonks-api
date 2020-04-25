@@ -34,8 +34,8 @@
             <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
                 <div class="col-sm-6 ftco-animate text-center">
-                    <h1 class="mb-4">Fuel Your Body Fitness</h1>
-                    <h2 class="subheading">Be One Of Us</h2>
+                    <h1 class="mb-4">Reach your MetaLevel</h1>
+                    <h2 class="subheading">Custom Fitness and Diet Plans</h2>
                 </div>
 
             </div>
