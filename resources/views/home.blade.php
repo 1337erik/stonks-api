@@ -2,18 +2,22 @@
 
 @section( 'content' )
 
-<a id="bgndVideo" class="player"
-data-property="{videoURL:'http://youtu.be/7lutvYTZk8E',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt: 36, opacity:1}">
-</a>
+<a id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/7lutvYTZk8E',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt: 36, opacity:1}"></a>
 
 <div class="intro-section" id="home-section" style="background-color: #ccc;">
-<div class="container">
-  <div class="row align-items-center">
-    <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
-      <h1>Welcome To Gymer</h1>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+
+                <h1>Upgrade You</h1>
+                <a href="#peniletransplants"><button class="btn btn-primary btn-lg" type="button">Start your free trial</button></a>
+                <h2 class="mt-4 text-white">Fitness | Nutrition | Lifestyle</h2>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </div>
 
 <section class="home-slider js-fullheight owl-carousel ftco-degree-bottom">
@@ -162,7 +166,7 @@ data-property="{videoURL:'http://youtu.be/7lutvYTZk8E',showYTLogo:false, showAnn
       </div>
   </section>
 
-  <section class="ftco-section bg-light">
+  <section class="ftco-section bg-light" id="peniletransplants">
       <div class="container-fluid">
           <div class="row justify-content-center mb-5">
         <div class="col-md-7 heading-section text-center ftco-animate">
