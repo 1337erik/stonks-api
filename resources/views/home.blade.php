@@ -13,7 +13,7 @@
 
             <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
 
-                <h1>Upgrade You</h1>
+                <h1>28 days to Upgrade You</h1>
                 <a href="#peniletransplants"><button class="btn btn-primary" style="font-size: 1.25rem" type="button">Start your Free Quarantine Trial</button></a>
                 <h2 class="mt-4 text-white">Fitness | Nutrition | Biohacking | Lifestyle</h2>
             </div>
@@ -245,23 +245,24 @@
 
                 <div class="coach align-items-stretch">
 
-                    <div class="img" style="background-image: url(images/diana1.png);"></div>
+                    <div class="img" style="background-image: url(images/erik1.png);"></div>
 
                     <div class="text bg-white p-4 ftco-animate">
 
-                        <span class="subheading">Trainer / Nutritionist</span>
-                        <h3>Diana Maybrook</h3>
-                        <p>Diana is a former NPC bikini competitor, and now she owns the first Biohacking Concept gym in Boca Raton, Fl. She is also a qualified Nutiritionist and does remote training.</p>
+                        <span class="subheading">Bulletproof Coaching</span>
+                        <h3><a href="#">Erik White</a></h3>
+                        <p>Owner of MetaLevel, Erik is a Human Potential Coach in training under the Bulletproof company. Erik specializes in Bulletproof coaching, from diet to workout programs and mindfulness practices.</p>
                         <ul class="ftco-social-media d-flex mt-4">
 
                             {{-- <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
                             <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li> --}}
-                            <li class="ftco-animate"><a href="https://www.instagram.com/dianamaybrook/" class="mr-2 d-flex justify-content-center align-items-center" target="_blank"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/meta_level_official/" class="mr-2 d-flex justify-content-center align-items-center" target="_blank"><span class="icon-instagram"></span></a></li>
                         </ul>
                         <p></p>
                     </div>
                 </div>
             </div>
+
             <div class="offset-lg-1 col-lg-3 d-flex">
 
                 <div class="coach d-md-flex flex-column-reverse align-items-stretch">
@@ -283,22 +284,23 @@
                     </div>
                 </div>
             </div>
+
             <div class="offset-lg-1 col-lg-3 d-flex">
 
                 <div class="coach align-items-stretch">
 
-                    <div class="img" style="background-image: url(images/trainer-3.jpg);"></div>
+                    <div class="img" style="background-image: url(images/diana1.png);"></div>
 
                     <div class="text bg-white p-4 ftco-animate">
 
-                        <span class="subheading">Open Positions</span>
-                        <h3><a href="#">Possibly You?</a></h3>
-                        <p>MetaLevel is always looking for coaches to expand our capacity to reach greater audiences. We provide you a platform to build a following and to build a name for yourself.</p>
+                        <span class="subheading">Trainer / Nutritionist</span>
+                        <h3>Diana Maybrook</h3>
+                        <p>Diana is a former NPC bikini competitor, and now she owns a Biohacking Concept gym in South Florida. She is also a qualified Nutiritionist and does remote training.</p>
                         <ul class="ftco-social-media d-flex mt-4">
 
                             {{-- <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li> --}}
+                            <li class="ftco-animate"><a href="#" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a></li> --}}
+                            <li class="ftco-animate"><a href="https://www.instagram.com/dianamaybrook/" class="mr-2 d-flex justify-content-center align-items-center" target="_blank"><span class="icon-instagram"></span></a></li>
                         </ul>
                         <p></p>
                     </div>
@@ -348,14 +350,14 @@
 
                 <div class="package-program ftco-animate">
 
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-1.jpg);">
+                    <a href="#pricing" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-1.jpg);">
 
                         <span>Learn More</span>
                     </a>
                     <div class="text mt-3">
 
-                        <h3><a href="#">Body Building</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3>Strength Training</h3>
+                        <p>Build your body to be stronger and more capable, grow towards your genetic potential.</p>
                     </div>
                 </div>
             </div>
@@ -363,14 +365,14 @@
 
                 <div class="package-program ftco-animate">
 
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-2.jpg);">
+                    <a href="#pricing" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-2.jpg);">
 
                         <span>Learn More</span>
                     </a>
                     <div class="text mt-3">
 
-                        <h3><a href="#">Aerobic Classes</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3>Aerobic Fitness</h3>
+                        <p>Slim down your waist, develop cut abs, and show off that beach body you crave having.</p>
                     </div>
                 </div>
             </div>
@@ -378,14 +380,14 @@
 
                 <div class="package-program ftco-animate">
 
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-3.jpg);">
+                    <a href="#pricing" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/image_5.jpg);">
 
                         <span>Learn More</span>
                     </a>
                     <div class="text mt-3">
 
-                        <h3><a href="#">Weight Lifting</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3>Nutrition Programs</h3>
+                        <p>Understand what to eat and what not to eat, follow a program our coaches build custom for you!</p>
                     </div>
                 </div>
             </div>
@@ -393,14 +395,14 @@
 
                 <div class="package-program ftco-animate">
 
-                    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-4.jpg);">
+                    <a href="#pricing" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/program-4.jpg);">
 
                         <span>Learn More</span>
                     </a>
                     <div class="text mt-3">
 
-                        <h3><a href="#">Yoga Classes</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <h3>Yoga & Meditation</h3>
+                        <p>Learn why meditation is important, and follow a guided yoga program that will get you flexible.</p>
                     </div>
                 </div>
             </div>
@@ -412,7 +414,7 @@
 
             <div class="col-md-4 text-center">
 
-                <a href="#" class="btn-custom py-4">View More Program <span class="ion-ios-arrow-down ml-2"></span></a>
+                <a href="#pricing" class="btn-custom py-4">Sign up now <span class="ion-ios-arrow-down ml-2"></span></a>
             </div>
         </div>
     </div>
@@ -508,7 +510,7 @@
 </section>
 {{-- End Pricing Section --}}
 
-{{-- Testimony sections --}}
+{{-- Testimony sections 
 <section class="ftco-section testimony-section" id="testimonies">
 
     <div class="container">
@@ -666,7 +668,7 @@
         </div>
     </div>
 </section>
-{{-- End testimony Section --}}
+ End testimony Section --}}
 
 {{-- Blog Section 
 <section class="ftco-section bg-light">
@@ -823,7 +825,7 @@
 </section>
 {{-- End Contact Us Section --}}
 
-{{-- Instagram gallery section --}}
+{{-- Instagram gallery section 
 <section class="ftco-gallery">
 
     <div class="container-wrap">
@@ -924,5 +926,5 @@
          </div>
     </div>
 </section>
-{{-- End Instagram gallery Section --}}
+ End Instagram gallery Section --}}
 @endsection
