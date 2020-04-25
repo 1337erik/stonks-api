@@ -12,22 +12,14 @@
 
             <ul class="navbar-nav ml-auto">
 
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">Home</a></li> --}}
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">UI App</a></li> --}}
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">Programs</a></li> --}}
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">Coaches</a></li> --}}
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">Schedule</a></li> --}}
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">Contact</a></li> --}}
-                {{-- <li class="nav-item"><a href="program.html" class="nav-link">Sign Up</a></li> --}}
-
-
                 <li class="nav-item"><a href="#bgndVideo" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#peniletransplants" class="nav-link">Program</a></li>
-                <li class="nav-item"><a href="coaches.html" class="nav-link">Coaches</a></li>
-                <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                {{-- <li class="nav-item active"><a href="{{ config( 'app.ui_url' ) }}" class="nav-link">Our App</a></li> --}}
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#coaches" class="nav-link">Coaches</a></li>
+                <li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#testimonies" class="nav-link">Testimonies</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                <li class="nav-item active"><a href="{{ config( 'app.ui_url' ) }}" class="nav-link">Our App</a></li>
             </ul>
         </div>
     </div>
