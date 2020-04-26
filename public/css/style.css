@@ -7695,14 +7695,6 @@ h1, h2, h3, h4, h5,
         .owl-carousel.home-slider .owl-dots .owl-dot.active {
           background: #fff; }
 
-@media( min-width: 768px) {
-
-  .owl-carousel.home-slider{
-
-    display: none !important;
-  }
-}
-
 .hero-wrap {
   width: 100%;
   position: relative; }
@@ -9438,11 +9430,3 @@ textarea.form-control {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.1rem;
     max-width: 400px; }
-
-@media( max-width: 767.98px) {
-
-  .intro-section {
-
-    /* display: none !important; */
-  }
-}
