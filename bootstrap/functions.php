@@ -1,14 +1,11 @@
 <?php
 
-use Carbon\Carbon;
-use Illuminate\Filesystem\FilesystemAdapter;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
-use Illuminate\Validation\ValidationException;
-
 ////////////////////////////////////
 //// Float Safe Math Functions
 ////////////////////////////////////
+
+use App\Role;
+use Illuminate\Support\Facades\Auth;
 
 function add($operand1, $operand2, $decimals=2): float
 {
@@ -162,175 +159,16 @@ function utc_date($input, $to_format='Y-m-d H:i:s', $from_timezone='America/New_
     return $carbon->format($to_format);
 }
 
-/**
- * Check if an administrator is logged in or impersonating another user
- *
- * @return bool
- */
-function is_admin() {
-
-    if( Auth::check() ){ // && $impersonator = Auth::user()->impersonator() ) {
-
-        // return $impersonator->role_type === 'admin';
-        return Auth::user()->role_type === 'admin';
-    }
-    return is_admin_now();
-}
+////////////////////////////////////
+//// Date Functions
+////////////////////////////////////
 
 /**
- * Check if an administrator is logged in and NOT impersonating another user
- *
+ * Determines whether or not the authenticated user contains the "God" role in the system
+ * 
  * @return bool
  */
-function is_admin_now() {
-    return Auth::check() && Auth::user()->role_type === 'admin';
-}
+function is_god(){
 
-/**
- * Check if the logged in user is an office user
- *
- * @return bool
- */
-function is_office_user() {
-    return Auth::check() && Auth::user()->role_type === 'office_user';
-}
-
-/**
- * Check if the logged in user is a caregiver
- *
- * @return bool
- */
-function is_caregiver() {
-    return Auth::check() && Auth::user()->role_type === 'caregiver';
-}
-
-/**
- * Check if the logged in user is a client
- *
- * @return bool
- */
-function is_client() {
-    return Auth::check() && Auth::user()->role_type === 'client';
-}
-
-if (! function_exists('snake_to_title_case')) {
-    /**
-     * Convert snake_case to Title Case.
-     *
-     * @param string $str
-     * @return string
-     */
-    function snake_to_title_case(string $str): string
-    {
-        return Str::title(preg_replace('/_/', ' ', $str));
-    }
-}
-
-if (! function_exists('download_file')) {
-    /**
-     * Download file from the given URL and save it to the local storage disk.
-     * Usage: download_file('http://path', \Storage::disk('public'), 'path\file.txt')
-     *
-     * @param string $url
-     * @param FilesystemAdapter $disk
-     * @param string $filename
-     * @return bool
-     */
-    function download_file(string $url, FilesystemAdapter $disk, string $filename): bool
-    {
-        try {
-            $process = curl_init($url);
-            curl_setopt($process, CURLOPT_HEADER, 1);
-            curl_setopt($process, CURLOPT_TIMEOUT, 60);
-            curl_setopt($process, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($process, CURLOPT_FOLLOWLOCATION, true);
-
-            if (! ($result = curl_exec($process))) {
-                return false;
-            }
-
-            $responseCode = curl_getinfo($process, CURLINFO_HTTP_CODE);
-            $header_size = curl_getinfo($process, CURLINFO_HEADER_SIZE);
-            curl_close($process);
-
-            if ($responseCode != "200") {
-                return false;
-            }
-
-            $contents = substr($result, $header_size);
-            $disk->put($filename, $contents);
-            return true;
-
-        } catch (\Exception $ex) {
-            app('sentry')->captureException($ex);
-            return false;
-        }
-    }
-}
-
-if (! function_exists('dump_csv')) {
-    function dump_csv(string $filename, \Illuminate\Support\Collection $data, array $headers = null): bool
-    {
-        if (! count($data)) {
-            return false;
-        }
-
-        $fp = fopen($filename, 'w');
-
-        if ($headers) {
-            fputcsv($fp, $headers);
-        } else {
-            fputcsv($fp, array_keys($data->first()));
-        }
-
-        $data->each(function ($row) use ($fp) {
-            fputcsv($fp, $row);
-        });
-
-        fclose($fp);
-
-        return true;
-    }
-}
-
-if (! function_exists('standard_filename')) {
-    function standard_filename(string $subject, string $documentName, string $extension, bool $addDate = true) : string
-    {
-        $date = ' ' . Carbon::now()->format('Y-m-d');
-
-        if (! $addDate) {
-            $date = '';
-        }
-
-        return strtolower(Str::slug("{$subject} {$documentName}{$date}")) . ".{$extension}";
-    }
-}
-
-if (! function_exists('valid_ssn')) {
-    /**
-     * Check for valid SSN format.
-     *
-     * @param null|string $ssn
-     * @return bool
-     */
-    function valid_ssn(?string $ssn): bool
-    {
-        return preg_match('/^(?!666|000\d{2})\d{3}[- ]{0,1}(?!00)\d{2}[- ]{0,1}(?!0{4})\d{4}$/', $ssn);
-    }
-}
-
-if (! function_exists('queue')) {
-    /**
-     * Dispatch a job to the queue with retries in case the
-     * queue connection temporarily goes down.
-     *
-     * @param mixed $job
-     * @throws Exception
-     */
-    function queue($job): void
-    {
-        retry(20, function () use ($job) {
-           dispatch($job);
-        }, 200);
-    }
+    $user = Auth::user()->roles()->where( 'type', Role::GOD )->exists();
 }

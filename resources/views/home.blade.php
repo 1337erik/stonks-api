@@ -2,8 +2,8 @@
 
 @section( 'content' )
 
-{{-- My dancing bitch!!! --}}
-<a id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/7lutvYTZk8E',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt: 36, opacity:1}"></a>
+{{-- My dancing bitch!!! http://youtu.be/7lutvYTZk8E --}}
+<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/Zbow21FKJS4',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt:36, opacity:1, anchor:'center,top'}"></a>
 
 <div class="intro-section" id="home-section" style="background-color: #ccc;">
 
@@ -22,7 +22,7 @@
 </div>
 {{-- end of the dancing bitch --}}
 
-{{-- Slider Section --}}
+{{-- Slider Section
 <section class="home-slider js-fullheight owl-carousel ftco-degree-bottom">
 
     <div class="slider-item js-fullheight" style="background-image: url(images/bg_1.jpg);">
@@ -34,10 +34,10 @@
             <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
                 <div class="col-sm-6 ftco-animate text-center">
-                    <h1 class="mb-4">Fuel Your Body Fitness</h1>
-                    <h2 class="subheading">Be One Of Us</h2>
-                </div>
 
+                    <h1 class="mb-4">Your Growth Mindset</h1>
+                    <h2 class="subheading">Custom Fitness and Diet Plans</h2>
+                </div>
             </div>
         </div>
     </div>
@@ -50,11 +50,10 @@
 
             <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
-            <div class="col-sm-7 ftco-animate text-center">
-                <h1 class="mb-4">Challenge Yourself</h1>
-                <h2 class="subheading">Get Your Body Fit</h2>
-            </div>
-
+                <div class="col-sm-7 ftco-animate text-center">
+                    <h1 class="mb-4">Challenge Yourself</h1>
+                    <h2 class="subheading">Get Your Body Fit</h2>
+                </div>
             </div>
         </div>
     </div>
