@@ -3,7 +3,7 @@
 @section( 'content' )
 
 {{-- My dancing bitch!!! http://youtu.be/7lutvYTZk8E --}}
-<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/Zbow21FKJS4',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt:36, opacity:1, anchor:'center,top'}"></a>
+<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/Zbow21FKJS4',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:10, stopAt:36, opacity:1, anchor:'center,top', optimizeDisplay:false}"></a>
 
 <div class="intro-section" id="home-section" style="background-color: #ccc;">
 
