@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Managers\UserManager;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,6 +41,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * 
+     */
     public function roles()
     {
         return $this->belongsToMany( Role::class, 'user_roles' )
@@ -51,6 +55,9 @@ class User extends Authenticatable
             ]);
     }
 
+    /**
+     * 
+     */
     public function permissions()
     {
         return $this->belongsToMany( Permission::class, 'user_permissions' )
@@ -62,27 +69,52 @@ class User extends Authenticatable
             ]);
     }
 
-    public function giveRole( $type )
+    /**
+     * 
+     * @param string $type
+     * 
+     * @return void
+     */
+    public function getsRole( string $type )
     {
-        $role = Role::where( 'type', $type )->firstOrFail();
-        $this->roles()->attach( $role->id );
+        $ro = new UserManager();
+        $ro->giveRoleTo( $type, $this );
     }
 
-    public function givePermission( $type )
+    /**
+     * @param string $type
+     * 
+     * @return void
+     */
+    public function getsPermission( $type )
     {
-        $permission = Permission::where( 'type', $type )->firstOrFail();
-        $this->permissions()->attach( $permission->id );
+        $ro = new UserManager();
+        $ro->givePermissionTo( $type, $this );
     }
 
+    /**
+     * Checks if a relationwhip exists, by role type
+     * 
+     * @param string $type
+     * 
+     * @return bool
+     */
     public function hasRole( $type )
     {
-        $role = Role::where( 'type', $type )->firstOrFail();
+        Role::where( 'type', $type )->firstOrFail();
         return $this->roles()->where( 'type', $type )->exists();
     }
 
+    /**
+     * Checks if a relationwhip exists, by permission type
+     * 
+     * @param string $type
+     * 
+     * @return bool
+     */
     public function hasPermission( $type )
     {
-        $role = Permission::where( 'type', $type )->firstOrFail();
+        Permission::where( 'type', $type )->firstOrFail();
         return $this->permissions()->where( 'type', $type )->exists();
     }
 }

@@ -16,10 +16,14 @@ class Role extends Model
     const EDITOR = 'editor';
     const USER = 'user';
 
-    public static function allRoles(){
-
+    /**
+     * Return the white-list of possible roles
+     * 
+     * @return array
+     */
+    public static function allRoles()
+    {
         return [
-
             self::GOD,
             self::ADMIN,
             self::COACH,

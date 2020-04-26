@@ -170,5 +170,7 @@ function utc_date($input, $to_format='Y-m-d H:i:s', $from_timezone='America/New_
  */
 function is_god(){
 
-    $user = Auth::user()->roles()->where( 'type', Role::GOD )->exists();
+    $user = Auth::user();
+
+    return $user->email === 'erikpwhite@gmail.com' && $user->hasRole( Role::GOD );
 }

@@ -11,10 +11,10 @@
 
         <div class="row align-items-center">
 
-            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+            <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
 
-                <h1>28 days to Upgrade You</h1>
-                <a href="#peniletransplants"><button class="btn btn-primary" style="font-size: 1.25rem" type="button">Start your Free Quarantine Trial</button></a>
+                <h1>{{ $quote }}</h1>
+                <a href="#peniletransplants"><button class="btn btn-primary mt-4" style="font-size: 1.25rem" type="button">Start your Free Quarantine Trial</button></a>
                 <h2 class="mt-4 text-white">Fitness | Nutrition | Biohacking | Lifestyle</h2>
             </div>
         </div>

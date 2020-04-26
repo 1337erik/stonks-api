@@ -24,14 +24,14 @@ class UserSeeder extends Seeder
             'password' => Hash::make( '1squidward' )
         ]);
 
-        $erik->giveRole( Role::GOD );
+        $erik->getsRole( Role::GOD );
 
         factory( User::class, 25 )
             ->create()
             ->each( function( $user ){
 
-                $user->giveRole( Role::USER );
-                $user->givePermission( Permission::CAN_COMMENT );
+                $user->getsRole( Role::USER );
+                $user->getsPermission( Permission::CAN_COMMENT );
         });
     }
 }

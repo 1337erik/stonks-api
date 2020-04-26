@@ -10,8 +10,13 @@ class Permission extends Model
 
     const CAN_COMMENT = 'comment';
 
-    public static function allPermissions(){
-
+    /**
+     * Return the foundational seed permissions
+     * 
+     * @return array
+     */
+    public static function allPermissions()
+    {
         return [
             self::CAN_COMMENT
         ];

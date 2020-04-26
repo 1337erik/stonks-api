@@ -2,11 +2,23 @@
 
 namespace Tests\Feature;
 
+use App\Managers\QuoteManager;
+use App\Quote;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use QuoteSeeder;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase, WithFaker;
+
+    // Run the DatabaseSeeder...
+    // $this->seed();
+
+    // Run a single seeder...
+    // $this->seed( QuoteSeeder::class );
+
     /**
      * A basic test example.
      *
@@ -14,8 +26,10 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $this->seed( QuoteSeeder::class );
 
-        $response->assertStatus(200);
+        $m = new QuoteManager();
+        $quote = $m->getRandomQuote();
+        $this->assertNotNull( $quote );
     }
 }

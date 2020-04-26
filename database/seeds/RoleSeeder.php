@@ -1,5 +1,6 @@
 <?php
 
+use App\Managers\RoleManager;
 use App\Role;
 use Illuminate\Database\Seeder;
 
@@ -12,8 +13,7 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        $roles = Role::allRoles();
-        foreach( $roles as $role ){
+        foreach( Role::allRoles() as $role ){
             Role::create([
                 'type' => $role
             ]);

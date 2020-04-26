@@ -12,8 +12,7 @@ class PermissionSeeder extends Seeder
      */
     public function run()
     {
-        $permissions = Permission::allPermissions();
-        foreach( $permissions as $permission ){
+        foreach( Permission::allPermissions() as $permission ){
             Permission::create([
                 'type' => $permission
             ]);
