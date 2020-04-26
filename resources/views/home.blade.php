@@ -34,10 +34,10 @@
             <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
                 <div class="col-sm-6 ftco-animate text-center">
-                    <h1 class="mb-4">Reach your MetaLevel</h1>
+
+                    <h1 class="mb-4">Your Growth Mindset</h1>
                     <h2 class="subheading">Custom Fitness and Diet Plans</h2>
                 </div>
-
             </div>
         </div>
     </div>
@@ -50,11 +50,10 @@
 
             <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
-            <div class="col-sm-7 ftco-animate text-center">
-                <h1 class="mb-4">Challenge Yourself</h1>
-                <h2 class="subheading">Get Your Body Fit</h2>
-            </div>
-
+                <div class="col-sm-7 ftco-animate text-center">
+                    <h1 class="mb-4">Challenge Yourself</h1>
+                    <h2 class="subheading">Get Your Body Fit</h2>
+                </div>
             </div>
         </div>
     </div>
