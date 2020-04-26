@@ -4,6 +4,9 @@
 //// Float Safe Math Functions
 ////////////////////////////////////
 
+use App\Role;
+use Illuminate\Support\Facades\Auth;
+
 function add($operand1, $operand2, $decimals=2): float
 {
     return round(
@@ -154,4 +157,18 @@ function utc_date($input, $to_format='Y-m-d H:i:s', $from_timezone='America/New_
     $carbon = new \Carbon\Carbon($input, $from_timezone);
     $carbon->timezone('UTC');
     return $carbon->format($to_format);
+}
+
+////////////////////////////////////
+//// Date Functions
+////////////////////////////////////
+
+/**
+ * Determines whether or not the authenticated user contains the "God" role in the system
+ * 
+ * @return bool
+ */
+function is_god(){
+
+    $user = Auth::user()->roles()->where( 'type', Role::GOD )->exists();
 }

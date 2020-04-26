@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Role;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Horizon\Horizon;
 use Laravel\Horizon\HorizonApplicationServiceProvider;
@@ -34,12 +35,8 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
     protected function gate()
     {
         Gate::define( 'viewHorizon', function ( $user ) {
-            // TODO => redefine how this works via a centralized gate or something
 
-            return in_array( $user->email, [
-
-                'erikpwhite@gmail.com'
-            ]);
+            return $user->email === 'erikpwhite@gmail.com' && $user->hasRole( Role::GOD );
         });
     }
 }

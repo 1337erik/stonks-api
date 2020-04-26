@@ -73,4 +73,16 @@ class User extends Authenticatable
         $permission = Permission::where( 'type', $type )->firstOrFail();
         $this->permissions()->attach( $permission->id );
     }
+
+    public function hasRole( $type )
+    {
+        $role = Role::where( 'type', $type )->firstOrFail();
+        return $this->roles()->where( 'type', $type )->exists();
+    }
+
+    public function hasPermission( $type )
+    {
+        $role = Permission::where( 'type', $type )->firstOrFail();
+        return $this->permissions()->where( 'type', $type )->exists();
+    }
 }
