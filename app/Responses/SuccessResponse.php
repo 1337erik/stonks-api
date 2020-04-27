@@ -15,13 +15,11 @@ class SuccessResponse implements Responsable
     protected $statusCode = 200;
     protected $message;
     protected $data;
-    protected $redirect;
 
-    public function __construct( $message, $data = [], $redirect = null )
+    public function __construct( $message, $data = [] )
     {
         $this->message  = $message;
         $this->data     = $data;
-        $this->redirect = $redirect;
     }
 
     /**
@@ -37,7 +35,6 @@ class SuccessResponse implements Responsable
 
             'message'  => $this->message,
             'data'     => $this->data,
-            'redirect' => $this->redirect,
         ];
 
         return new JsonResponse( array_filter( $response ), $this->statusCode );
