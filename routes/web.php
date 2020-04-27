@@ -25,4 +25,4 @@ Route::post( 'password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail
 Route::post( 'password/reset', 'Auth\ResetPasswordController@reset' );
 Route::get( 'password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm' );
 Route::get( 'password/reset/{token}', 'Auth\ResetPasswordController@showResetForm' );
-Route::post( 'register', 'Auth\RegisterController@register' )->name( 'register' );
+// Route::post( 'register', 'Auth\RegisterController@register' )->name( 'register' );

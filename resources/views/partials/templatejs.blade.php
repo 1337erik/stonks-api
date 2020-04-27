@@ -17,4 +17,22 @@
 <script src="{{ asset( 'js/scrollax.min.js' ) }}"></script>
 {{-- <script src="{{ asset( 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false' ) }}"></script> --}}
 {{-- <script src="{{ asset( 'js/google-map.js' ) }}"></script> --}}
+
+<script src="{{ asset( 'js/typed.js' ) }}"></script>
+<script>
+
+    var quotes = JSON.parse({!! json_encode($quotes) !!});
+    var typed = new Typed( '.typed-words', {
+
+        strings    : quotes,
+        typeSpeed  : 50,
+        backSpeed  : 50,
+        backDelay  : 2250,
+        startDelay : 800,
+        loop       : true,
+        showCursor : true
+    });
+</script>
+
+
 <script src="{{ asset( 'js/main.js' ) }}"></script>

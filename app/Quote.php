@@ -47,8 +47,9 @@ class Quote extends Model
 
     const HERO_QUOTES = [
 
+        'Engage with life on a MetaLevel',
         'You were born for growth',
-        'You are where you\'re aiming',
+        'You are what you aim at',
         'Be the driver of your life',
         'Re-learn living'
     ];

@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <a class="navbar-brand py-2 px-2" href="index.html">MetaLevel</a>
+        <a class="navbar-brand py-2 px-2" href="#">MetaLevel</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu

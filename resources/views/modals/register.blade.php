@@ -16,7 +16,8 @@
 
             <div class="modal-body">
 
-                <form action="{{ route('register') }}" method="POST">
+                Registration is closed at the moment! Site in development.
+                {{-- <form action="{{ route('register') }}" method="POST">
                     @csrf
 
                     <div class="form-group">
@@ -68,7 +69,7 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="modal-footer">
@@ -76,7 +77,7 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary">Register</button>
                 </div>
-            </form>
+            {{-- </form> --}}
         </div>
     </div>
 </div>

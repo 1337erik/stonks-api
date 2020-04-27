@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index( QuoteManager $quo )
     {
-        $quote = $quo->getRandomQuote()->body;
-        return view( 'home', compact( 'quote' ) );
+        $quotes = json_encode( $quo->getAllQuotes( Quote::CATEGORY_HERO )->pluck( 'body' ) );
+        return view( 'home', compact( 'quotes' ) );
     }
 }

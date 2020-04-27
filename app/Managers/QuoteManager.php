@@ -15,9 +15,18 @@ class QuoteManager {
 
     }
 
-    public function allQuotes()
+    /**
+     * Optional to specify a category, return all quotes from the database
+     * 
+     * @param string $category
+     * @return App\Quote $quote
+     */
+    public function getAllQuotes( $category = null )
     {
-        return Quote::get();
+        return Quote::when( !empty( $category ), function( $query ) use( $category ){
+
+            $query->where( 'category', '=', $category );
+        })->get();
     }
 
     /**
