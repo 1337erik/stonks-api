@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Managers\QuoteManager;
 use App\Quote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
      */
     public function index( QuoteManager $quo )
     {
-        $quote = $quo->getRandomQuote();
+        $quote = $quo->getRandomQuote()->body;
         return view( 'home', compact( 'quote' ) );
     }
 }

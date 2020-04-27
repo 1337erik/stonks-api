@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -36,5 +39,23 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Send the response after the user was authenticated.
+     * Overridden, not quite sure the response type.. ideally just the user lol
+     *
+     * @param  \Illuminate\Http\Request  $request
+     */
+    protected function sendLoginResponse( Request $request )
+    {
+        $request->session()->regenerate();
+        $this->clearLoginAttempts($request);
+
+        if ($response = $this->authenticated($request, $this->guard()->user())) {
+            return $response;
+        }
+
+        return response()->json( $this->guard()->user()->toArray() );
     }
 }

@@ -14,7 +14,7 @@
             <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
 
                 <h1>{{ $quote }}</h1>
-                <a href="#peniletransplants"><button class="btn btn-primary mt-4" style="font-size: 1.25rem" type="button">Start your Free Quarantine Trial</button></a>
+                <button class="btn btn-primary mt-4" style="font-size: 1.25rem" type="button" data-toggle="modal" data-target="#registerModal">Start your Free Quarantine Trial</button>
                 <h2 class="mt-4 text-white">Fitness | Nutrition | Biohacking | Lifestyle</h2>
             </div>
         </div>
@@ -22,7 +22,34 @@
 </div>
 {{-- end of the dancing bitch --}}
 
-{{-- What we do section --}}
+
+{{-- Half-Split Video section 
+<section class="ftco-about d-md-flex bg-light">
+
+    <div class="one-half img" style="background-image: url(images/about-2.jpg);">
+
+        <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+
+            <span class="icon-play">
+        </a>
+    </div>
+    <div class="one-half ftco-animate">
+
+        <div class="heading-section ftco-animate">
+
+            <h3 class="subheading">About MetaLevel</h3>
+            <h2 class="mb-5">Welcome <br>To Our Gym</h2>
+        </div>
+        <div>
+
+            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+        </div>
+    </div>
+</section>
+{{-- End Half-Split Video section --}}
+
+{{-- Half-Split Regular section --}}
+
 <section class="ftco-section-services ftco-degree" id="about">
 
     <div class="container">
@@ -96,7 +123,7 @@
         </div>
     </div>
 </section>
-{{-- End what we do --}}
+{{-- End Half-Split Regular --}}
 
 {{-- The fucking metrics section --}}
 <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">
@@ -161,31 +188,6 @@
     </div>
 </section>
 {{-- End metrics section --}}
-
-{{-- Half-video section -- HIDE FOR NOW until I get a promo video
-<section class="ftco-about d-md-flex bg-light">
-
-    <div class="one-half img" style="background-image: url(images/about-2.jpg);">
-
-        <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
-
-            <span class="icon-play">
-        </a>
-    </div>
-    <div class="one-half ftco-animate">
-
-        <div class="heading-section ftco-animate">
-
-            <h3 class="subheading">About MetaLevel</h3>
-            <h2 class="mb-5">Welcome <br>To Our Gym</h2>
-        </div>
-        <div>
-
-            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-        </div>
-    </div>
-</section>
- End Half-video section --}}
 
 {{-- Our Coaches section --}}
 <section class="ftco-section bg-light" id="coaches">

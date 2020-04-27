@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get( '/', 'HomeController@index' )->name( 'homebase' );
 
 // Auth::routes();
+// Route::get( 'login', 'Auth\LoginController@showLoginForm' )->name( 'login' );
 Route::post( 'login', 'Auth\LoginController@login' );
 Route::post( 'logout', 'Auth\LoginController@logout' );
 Route::post( 'password/confirm', 'Auth\ConfirmPasswordController@confirm' );
@@ -24,4 +25,4 @@ Route::post( 'password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail
 Route::post( 'password/reset', 'Auth\ResetPasswordController@reset' );
 Route::get( 'password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm' );
 Route::get( 'password/reset/{token}', 'Auth\ResetPasswordController@showResetForm' );
-Route::post( 'register', 'Auth\RegisterController@register' );
+Route::post( 'register', 'Auth\RegisterController@register' )->name( 'register' );
