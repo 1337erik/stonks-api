@@ -1,5 +1,6 @@
 <?php
 
+use App\Responses\SuccessResponse;
 use App\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,7 @@ Route::group([ 'middleware' => [ 'auth:sanctum' ]], function () {
 
         Route::get( '/penile', function( Request $request ){
 
-            return response()->json( 'yay lmfao' );
+            return new SuccessResponse( 'yay lmfao' );
         });
     });
 });
