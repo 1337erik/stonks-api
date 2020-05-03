@@ -9413,6 +9413,8 @@ textarea.form-control {
     #main-page-hero-text {
 
       height: 90px;
+      max-width: 250px;
+      margin: auto;
     }
   }
 
