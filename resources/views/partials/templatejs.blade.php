@@ -21,7 +21,7 @@
 <script src="{{ asset( 'js/typed.js' ) }}"></script>
 <script>
 
-    var quotes = JSON.parse({!! json_encode($quotes ?? null) !!});
+    var quotes = JSON.parse({!! json_encode( $quotes ?? null ) !!});
     var typed = new Typed( '.typed-words', {
 
         strings    : quotes,

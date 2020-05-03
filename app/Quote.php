@@ -51,6 +51,8 @@ class Quote extends Model
         'You were born for growth',
         'You are what you aim at',
         'Be the driver of your life',
-        'Re-learn living'
+        'Re-learn living',
+        'Your Mecca for personal growth',
+        'Learn cognitive performance enhancement'
     ];
 }

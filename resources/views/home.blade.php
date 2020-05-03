@@ -9,11 +9,11 @@
 
     <div class="container">
 
-        <div class="row align-items-center">
+        <div id="main-page-hero-text-container" class="row align-items-center">
 
             <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
 
-                <h1 class="mt-4 text-white"><span class="text-white typed-words"></span></h1>
+                <h1 id="main-page-hero-text" class="mt-4 text-white"><span class="text-white typed-words"></span></h1>
                 <button class="btn btn-primary mt-4" style="font-size: 1.25rem" type="button" data-toggle="modal" data-target="#registerModal">Start your Free Quarantine Trial</button>
             </div>
         </div>
