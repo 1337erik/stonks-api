@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
             QuoteSeeder::class,
             RoleSeeder::class,
             PermissionSeeder::class,
-            UserSeeder::class
+            UserSeeder::class,
+            IntentionSeeder::class
         ]);
     }
 }

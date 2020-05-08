@@ -71,6 +71,14 @@ class User extends Authenticatable
 
     /**
      * 
+     */
+    public function intentions()
+    {
+        return $this->hasMany( Intention::class );
+    }
+
+    /**
+     * 
      * @param string $type
      * 
      * @return void
