@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Intention;
+use App\Managers\IntentionManager;
 use Illuminate\Http\Request;
 
 class IntentionController extends Controller
@@ -12,9 +13,9 @@ class IntentionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index( IntentionManager $mng )
     {
-        //
+        return $mng->getIntentionsForUser( auth()->user()->id );
     }
 
     /**

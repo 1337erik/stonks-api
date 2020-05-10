@@ -13,5 +13,6 @@ $factory->define(Intention::class, function (Faker $faker) {
             return factory( User::class )->create()->id;
         },
         'title' => $faker->words( 4, true ),
+        'fulfill_by' => $faker->dateTimeBetween( 'now', '+1 year' )
     ];
 });

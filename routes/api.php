@@ -27,6 +27,7 @@ Route::group([ 'middleware' => [ 'auth:sanctum' ]], function () {
     Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::USER ]], function () {
 
         Route::resource( 'information', 'InformationController' );
+        Route::resource( 'intentions', 'IntentionController' );
     });
 
     Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::AUTHOR ]], function () {
