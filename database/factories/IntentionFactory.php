@@ -5,6 +5,7 @@
 use App\Intention;
 use App\User;
 use Faker\Generator as Faker;
+use Illuminate\Support\Carbon;
 
 $factory->define(Intention::class, function (Faker $faker) {
     return [

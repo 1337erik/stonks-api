@@ -17,9 +17,21 @@ class Intention extends Model
         'fulfill_by' => 'datetime',
     ];
 
+    protected $appends = [
+        'path'
+    ];
+
     public function user()
     {
         return $this->belongsTo( User::class );
+    }
+
+    /**
+     * The resource's path
+     */
+    public function getPathAttribute()
+    {
+        return "/api/intentions/{$this->id}";
     }
 
     /**

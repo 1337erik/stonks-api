@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\IntentionRequest;
 use App\Intention;
 use App\Managers\IntentionManager;
-use Illuminate\Http\Request;
+use App\Responses\ErrorResponse;
+use App\Responses\SuccessResponse;
 
 class IntentionController extends Controller
 {
@@ -19,24 +21,16 @@ class IntentionController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( IntentionRequest $request )
     {
-        //
+        if( !$intention = Intention::create( array_merge( $request->validated(), [ 'user_id' => auth()->user()->id ] ) ) ) return new ErrorResponse( 403, 'Unable to create intention! Please try again.' );
+
+        return new SuccessResponse( 'Successfully created intention!', $intention );
     }
 
     /**
@@ -45,20 +39,11 @@ class IntentionController extends Controller
      * @param  \App\Intention  $intention
      * @return \Illuminate\Http\Response
      */
-    public function show(Intention $intention)
+    public function show( Intention $intention )
     {
-        //
-    }
+        if( auth()->user()->id != $intention->user_id ) return new ErrorResponse( 403, 'You are not allowed to view this.' ); // replace with policy
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Intention  $intention
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Intention $intention)
-    {
-        //
+        return $intention;
     }
 
     /**
@@ -68,9 +53,12 @@ class IntentionController extends Controller
      * @param  \App\Intention  $intention
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Intention $intention)
+    public function update( IntentionRequest $request, Intention $intention )
     {
-        //
+        if( auth()->user()->id != $intention->user_id ) return new ErrorResponse( 403, 'You are not allowed to update this.' ); // replace with policy
+        if( !$intention->update( $request->validated() ) ) return new ErrorResponse( 500, 'Unable to update intention' );
+
+        return new SuccessResponse( 'Successfully updated intention', $intention->refresh() );
     }
 
     /**
@@ -79,8 +67,11 @@ class IntentionController extends Controller
      * @param  \App\Intention  $intention
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Intention $intention)
+    public function destroy( Intention $intention )
     {
-        //
+        if( auth()->user()->id != $intention->user_id ) return new ErrorResponse( 403, 'You are not allowed to delete this.' ); // replace with policy
+        if( !$intention->delete() ) return new ErrorResponse( 403, 'Unable to delete intention' );
+
+        return new SuccessResponse( 'Successfully deleted intention' );
     }
 }
