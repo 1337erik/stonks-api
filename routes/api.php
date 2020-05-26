@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Resources\UserResource;
 use App\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,16 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([ 'middleware' => [ 'auth:sanctum' ]], function () {
 
-    Route::get( '/user', function ( Request $request ){
-        // should this be a user controller thing? not sure.. not sure I care either really
+    Route::get( '/getme', function ( Request $request ){
 
-        return $request->user();
+        return UserResource::collection( $request->user() );
     });
 
     Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::USER ]], function () {
 
         Route::resource( 'information', 'InformationController' );
-        Route::resource( 'intentions', 'IntentionController' );
+        Route::resource( 'goals', 'IntentionController' );
     });
 
     Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::AUTHOR ]], function () {

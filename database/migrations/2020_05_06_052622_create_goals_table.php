@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIntentionsTable extends Migration
+class CreateGoalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateIntentionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('intentions', function (Blueprint $table) {
+        Schema::create('goals', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger( 'user_id' );
             $table->string( 'title', 255 );
+            $table->string( 'description', 1000 );
             $table->dateTime( 'fulfill_by' )->nullable();
 
             $table->foreign( 'user_id' )->references( 'id' )->on( 'users' )->onDelete( 'CASCADE' );
@@ -32,6 +33,6 @@ class CreateIntentionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('intentions');
+        Schema::dropIfExists('goals');
     }
 }

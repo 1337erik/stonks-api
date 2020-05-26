@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Intention extends Model
+class Goal extends Model
 {
     protected $guarded = [];
 
@@ -31,7 +31,7 @@ class Intention extends Model
      */
     public function getPathAttribute()
     {
-        return "/api/intentions/{$this->id}";
+        return "/api/goals/{$this->id}";
     }
 
     /**

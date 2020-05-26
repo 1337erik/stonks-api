@@ -31,5 +31,7 @@ class ExampleTest extends TestCase
         $m = new QuoteManager();
         $quote = $m->getRandomQuote();
         $this->assertNotNull( $quote );
+
+        $this->get( 'api/getme' );
     }
 }

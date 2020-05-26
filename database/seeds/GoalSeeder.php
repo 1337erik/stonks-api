@@ -1,10 +1,10 @@
 <?php
 
-use App\Intention;
+use App\Goal;
 use App\User;
 use Illuminate\Database\Seeder;
 
-class IntentionSeeder extends Seeder
+class GoalSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class IntentionSeeder extends Seeder
     {
         User::get()->each( function( $user ){
 
-            factory( Intention::class, 5 )->create([ 'user_id' => $user->id ]);
+            factory( Goal::class, 5 )->create([ 'user_id' => $user->id ]);
         });
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -56,6 +57,7 @@ class LoginController extends Controller
             return $response;
         }
 
-        return response()->json( $this->guard()->user()->toArray() );
+        dd( $this->guard()->user() );
+        return response()->json( UserResource::collection( $this->guard()->user() ) );
     }
 }

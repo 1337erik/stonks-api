@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class IntentionRequest extends FormRequest
+class GoalRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,7 +14,7 @@ class IntentionRequest extends FormRequest
     public function authorize()
     {
         return true;
-        // permission policy to create intentions
+        // permission policy to create goals
     }
 
     /**
@@ -25,8 +25,9 @@ class IntentionRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'      => 'required|max:255',
-            'fulfill_by' => 'nullable|date'
+            'title'       => 'required|max:255',
+            'description' => 'required|max:1000|min:15',
+            'fulfill_by'  => 'nullable|date'
         ];
     }
 }

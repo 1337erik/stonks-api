@@ -41,6 +41,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $with = [
+        'roles',
+        'permissions'
+    ];
+
     /**
      * 
      */
@@ -72,9 +77,9 @@ class User extends Authenticatable
     /**
      * 
      */
-    public function intentions()
+    public function goals()
     {
-        return $this->hasMany( Intention::class );
+        return $this->hasMany( Goal::class );
     }
 
     /**

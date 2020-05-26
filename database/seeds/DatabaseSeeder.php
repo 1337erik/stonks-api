@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             PermissionSeeder::class,
             UserSeeder::class,
-            IntentionSeeder::class
+            GoalSeeder::class
         ]);
     }
 }
