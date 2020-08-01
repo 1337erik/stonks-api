@@ -5,6 +5,7 @@
 ////////////////////////////////////
 
 use App\Role;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 function add($operand1, $operand2, $decimals=2): float
@@ -58,6 +59,21 @@ function round_to_fraction( $number, $fraction = 4, $direction = 'floor' ){
 
             return null;
     }
+}
+
+/**
+ * Handy utility function to map the typical pagination controls that are on every table we use ( ideally )
+ * 
+ * @param Illuminate\Http\Request $request
+ * @return array
+ */
+function mapPagination( Request $request )
+{
+    $perPage   = $request->input( 'perPage', 25 );
+    $page      = $request->input( 'page', 1 );
+    $sortOrder = $request->input( 'desc', false ) == 'true' ? 'desc' : 'asc';
+    $offset    = ( $page - 1 ) * $perPage;
+    return [ $perPage, $sortOrder, $offset ];
 }
 
 /**

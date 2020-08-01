@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Managers\PostManager;
 use App\Post;
+use App\Responses\ErrorResponse;
 use App\Responses\SuccessResponse;
 use Illuminate\Http\Request;
 
@@ -36,9 +38,10 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( PostRequest $request )
     {
-        return response()->json( 'hey lmao16' );
+        if( $post = Post::create( $request->validated() ) ) return new SuccessResponse( 'You did it again mate', compact( 'post' ) );
+        return new ErrorResponse( 500, 'Sorry couldn\'t create this right now..' );
     }
 
     /**
@@ -47,20 +50,9 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show( Post $post, PostManager $mng )
     {
-        return response()->json( 'hey lmao14' );
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        return response()->json( 'hey lmao123' );
+        return $mng->getSingle( $post );
     }
 
     /**
@@ -70,9 +62,10 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update( PostRequest $request, Post $post )
     {
-        return response()->json( 'hey lmao12' );
+        if( $post->update( $request->validated() ) ) return new SuccessResponse( 'You did it again mate' );
+        return new ErrorResponse( 500, 'Sorry couldn\'t update this right now..' );
     }
 
     /**
@@ -81,8 +74,9 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy( Post $post )
     {
-        return response()->json( 'hey lmao1' );
+        if( $post->delete() ) return new SuccessResponse( 'You did it again mate' );
+        return new ErrorResponse( 500, 'Sorry couldn\'t delete this right now..' );
     }
 }

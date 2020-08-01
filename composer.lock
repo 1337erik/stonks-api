@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c90037ce13e41643b4838d62bae14d4",
+    "content-hash": "c11c465869aa062c2d38807565f6eb7b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -320,6 +320,72 @@
                 "php"
             ],
             "time": "2019-10-30T14:39:59+00:00"
+        },
+        {
+            "name": "dompdf/dompdf",
+            "version": "v0.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/dompdf.git",
+                "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+                "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "phenx/php-font-lib": "^0.5.1",
+                "phenx/php-svg-lib": "^0.3.3",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "ext-gd": "Needed to process images",
+                "ext-gmagick": "Improves image processing performance",
+                "ext-imagick": "Improves image processing performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dompdf\\": "src/"
+                },
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                },
+                {
+                    "name": "Brian Sweeney",
+                    "email": "eclecticgeek@gmail.com"
+                },
+                {
+                    "name": "Gabriel Bull",
+                    "email": "me@gabrielbull.com"
+                }
+            ],
+            "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
+            "homepage": "https://github.com/dompdf/dompdf",
+            "time": "2020-02-20T03:52:51+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -835,39 +901,40 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
-            "name": "laravel/cashier-paddle",
-            "version": "v1.0.0-beta",
+            "name": "laravel/cashier",
+            "version": "v12.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/cashier-paddle.git",
-                "reference": "e85d632e95fd56f6b676672284458de9228f8f1d"
+                "url": "https://github.com/laravel/cashier-stripe.git",
+                "reference": "4331fd1444a4034a8088e8957a8200dd9673313b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/cashier-paddle/zipball/e85d632e95fd56f6b676672284458de9228f8f1d",
-                "reference": "e85d632e95fd56f6b676672284458de9228f8f1d",
+                "url": "https://api.github.com/repos/laravel/cashier-stripe/zipball/4331fd1444a4034a8088e8957a8200dd9673313b",
+                "reference": "4331fd1444a4034a8088e8957a8200dd9673313b",
                 "shasum": ""
             },
             "require": {
+                "dompdf/dompdf": "^0.8.0",
                 "ext-json": "*",
-                "ext-openssl": "*",
-                "guzzlehttp/guzzle": "^6.5",
-                "illuminate/contracts": "^7.0",
-                "illuminate/database": "^7.0",
-                "illuminate/http": "^7.0",
-                "illuminate/routing": "^7.0",
-                "illuminate/support": "^7.0",
-                "illuminate/view": "^7.0",
+                "illuminate/contracts": "^6.0|^7.0",
+                "illuminate/database": "^6.0|^7.0",
+                "illuminate/http": "^6.0|^7.0",
+                "illuminate/log": "^6.0|^7.0",
+                "illuminate/notifications": "^6.0|^7.0",
+                "illuminate/routing": "^6.0|^7.0",
+                "illuminate/support": "^6.0|^7.0",
+                "illuminate/view": "^6.0|^7.0",
                 "moneyphp/money": "^3.2",
                 "nesbot/carbon": "^2.0",
                 "php": "^7.2",
-                "spatie/url": "^1.3",
-                "symfony/http-kernel": "^5.0",
-                "symfony/intl": "^5.0"
+                "stripe/stripe-php": "^7.29",
+                "symfony/http-kernel": "^4.3|^5.0",
+                "symfony/intl": "^4.3|^5.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^5.0",
+                "orchestra/testbench": "^4.0|^5.0",
                 "phpunit/phpunit": "^8.0|^9.0"
             },
             "suggest": {
@@ -876,17 +943,17 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "12.x-dev"
                 },
                 "laravel": {
                     "providers": [
-                        "Laravel\\Paddle\\CashierServiceProvider"
+                        "Laravel\\Cashier\\CashierServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Laravel\\Paddle\\": "src/"
+                    "Laravel\\Cashier\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -897,19 +964,15 @@
                 {
                     "name": "Taylor Otwell",
                     "email": "taylorotwell@gmail.com"
-                },
-                {
-                    "name": "Dries Vints",
-                    "email": "dries@vints.io"
                 }
             ],
-            "description": "Cashier Paddle provides an expressive, fluent interface to Paddle's subscription billing services.",
+            "description": "Laravel Cashier provides an expressive, fluent interface to Stripe's subscription billing services.",
             "keywords": [
                 "billing",
                 "laravel",
-                "paddle"
+                "stripe"
             ],
-            "time": "2020-06-05T13:40:34+00:00"
+            "time": "2020-07-21T15:04:05+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1987,6 +2050,83 @@
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
+            "name": "phenx/php-font-lib",
+            "version": "0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-font-lib.git",
+                "reference": "ca6ad461f032145fff5971b5985e5af9e7fa88d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/ca6ad461f032145fff5971b5985e5af9e7fa88d8",
+                "reference": "ca6ad461f032145fff5971b5985e5af9e7fa88d8",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5 || ^6 || ^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FontLib\\": "src/FontLib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse, export and make subsets of different types of font files.",
+            "homepage": "https://github.com/PhenX/php-font-lib",
+            "time": "2020-03-08T15:31:32+00:00"
+        },
+        {
+            "name": "phenx/php-svg-lib",
+            "version": "v0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-svg-lib.git",
+                "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+                "reference": "5fa61b65e612ce1ae15f69b3d223cb14ecc60e32",
+                "shasum": ""
+            },
+            "require": {
+                "sabberworm/php-css-parser": "^8.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.5|^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Svg\\": "src/Svg"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse and export to PDF SVG files.",
+            "homepage": "https://github.com/PhenX/php-svg-lib",
+            "time": "2019-09-11T20:02:13+00:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.7.3",
             "source": {
@@ -2733,29 +2873,30 @@
             "time": "2020-03-29T20:13:32+00:00"
         },
         {
-            "name": "spatie/macroable",
-            "version": "1.0.0",
+            "name": "sabberworm/php-css-parser",
+            "version": "8.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/macroable.git",
-                "reference": "74b0d189ce75142f1706aad834d5a428dfc7c3c3"
+                "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
+                "reference": "d217848e1396ef962fb1997cf3e2421acba7f796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/macroable/zipball/74b0d189ce75142f1706aad834d5a428dfc7c3c3",
-                "reference": "74b0d189ce75142f1706aad834d5a428dfc7c3c3",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/d217848e1396ef962fb1997cf3e2421acba7f796",
+                "reference": "d217848e1396ef962fb1997cf3e2421acba7f796",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.3"
+                "codacy/coverage": "^1.4",
+                "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Spatie\\Macroable\\": "src"
+                "psr-0": {
+                    "Sabberworm\\CSS": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2764,46 +2905,54 @@
             ],
             "authors": [
                 {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "name": "Raphael Schweikert"
                 }
             ],
-            "description": "A trait to dynamically add methods to a class",
-            "homepage": "https://github.com/spatie/macroable",
+            "description": "Parser for CSS Files written in PHP",
+            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
             "keywords": [
-                "macroable",
-                "spatie"
+                "css",
+                "parser",
+                "stylesheet"
             ],
-            "time": "2017-09-18T09:51:20+00:00"
+            "time": "2020-06-01T09:10:00+00:00"
         },
         {
-            "name": "spatie/url",
-            "version": "1.3.2",
+            "name": "stripe/stripe-php",
+            "version": "v7.45.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/url.git",
-                "reference": "1cfbd5736ca595e04c27f9f07ca51bbda28d754a"
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "21e5001f5e0d787e4755c8bfc00e578dce9ae058"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/url/zipball/1cfbd5736ca595e04c27f9f07ca51bbda28d754a",
-                "reference": "1cfbd5736ca595e04c27f9f07ca51bbda28d754a",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/21e5001f5e0d787e4755c8bfc00e578dce9ae058",
+                "reference": "21e5001f5e0d787e4755c8bfc00e578dce9ae058",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2",
-                "psr/http-message": "^1.0",
-                "spatie/macroable": "^1.0"
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.4"
+                "friendsofphp/php-cs-fixer": "2.16.1",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.3",
+                "symfony/process": "~3.4"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "Spatie\\Url\\": "src"
+                    "Stripe\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2812,19 +2961,18 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
                 }
             ],
-            "description": "Parse, build and manipulate URL's",
-            "homepage": "https://github.com/spatie/url",
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
             "keywords": [
-                "spatie",
-                "url"
+                "api",
+                "payment processing",
+                "stripe"
             ],
-            "time": "2020-02-23T13:13:32+00:00"
+            "time": "2020-07-29T04:29:52+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -6795,9 +6943,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "laravel/cashier-paddle": 10
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

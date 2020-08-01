@@ -21,11 +21,12 @@ class GoalManagerTest extends TestCase
     {
         parent::setUp();
 
-        $this->manager = new PostManager();
         $this->erik = factory( User::class )->create();
 
         $this->will = factory( User::class )->create();
         $this->actingAs( $this->erik );
+
+        $this->manager = new PostManager();
 
         $this->assertEquals( $this->erik->id, auth()->user()->id );
 
@@ -42,5 +43,16 @@ class GoalManagerTest extends TestCase
         $posts = $this->manager->getPaginated();
         $this->assertCount( 10, $posts[ 'results' ] );
         $this->assertEquals( 10, $posts[ 'total' ] );
+    }
+
+    /**
+     * @test
+     */
+    public function posts_manager_get_sinlge()
+    {
+        $post = factory( Post::class, 1 )->create([ 'user_id' => auth()->user()->id ])->first();
+
+        $fetched = $this->manager->getSingle( $post );
+        $this->assertEquals( $fetched->id, $post->id );
     }
 }

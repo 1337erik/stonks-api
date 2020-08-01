@@ -29,6 +29,7 @@ class UserResource extends JsonResource
             'permissions'       => PermissionResource::collection( $this->resource->permissions ),
 
             // Meta
+            'id'                => $this->resource->id,
             'name'              => $this->resource->name,
             'email'             => $this->resource->email,
             'email_verified_at' => $this->resource->email_verified_at,
