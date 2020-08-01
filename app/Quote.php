@@ -52,7 +52,7 @@ class Quote extends Model
         'You are what you aim at',
         'Be the driver of your life',
         'Re-learn living',
-        'Your Mecca for personal growth',
+        'Your Mecca for self development',
         'Learn cognitive performance enhancement'
     ];
 }

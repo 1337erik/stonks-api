@@ -21,13 +21,17 @@ Route::group([ 'middleware' => [ 'auth:sanctum' ]], function () {
 
     Route::get( '/getme', function ( Request $request ){
 
-        return UserResource::collection( $request->user() );
+        return new UserResource( $request->user() );
     });
+
+
+    Route::resource( 'posts', 'PostController' ); // TODO: address this, exclude some
+
 
     Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::USER ]], function () {
 
         Route::resource( 'information', 'InformationController' );
-        Route::resource( 'goals', 'IntentionController' );
+        Route::resource( 'goals', 'GoalController' );
     });
 
     Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::AUTHOR ]], function () {

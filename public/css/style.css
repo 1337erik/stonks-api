@@ -9404,12 +9404,6 @@ textarea.form-control {
 
   @media (max-width: 991.98px) {
 
-    #main-page-hero-text-container {
-
-      align-items: start !important;
-      padding-top: 35px;
-    }
-
     #main-page-hero-text {
 
       height: 90px;

@@ -26,6 +26,6 @@ class RoleResource extends JsonResource
             'status_duration'     => $this->pivot->status_duration,
             'status_effective_at' => $this->pivot->status_effective_at,
             'updated_at'          => $this->pivot->updated_at,
-        ]
+        ];
     }
 }

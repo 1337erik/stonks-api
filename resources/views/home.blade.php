@@ -2,127 +2,126 @@
 
 @section( 'content' )
 
-{{-- My dancing bitch!!! http://youtu.be/7lutvYTZk8E --}}
-<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/Zbow21FKJS4',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:2, stopAt:36, opacity:1, optimizeDisplay:false}"></a>
+    {{-- My hero video!!! old -> http://youtu.be/7lutvYTZk8E --}}
+    <a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/Zbow21FKJS4',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:2, stopAt:36, opacity:1, optimizeDisplay:false}"></a>
 
-<div class="intro-section" id="home-section" style="background-color: #ccc;">
+    <div class="intro-section d-none d-md-block" id="home-section" style="background-color: #ccc;">
 
-    <div class="container">
+        <div class="container">
 
-        <div id="main-page-hero-text-container" class="row align-items-center">
+            <div id="main-page-hero-text-container" class="row align-items-center">
 
-            <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
 
-                <h1 id="main-page-hero-text" class="mt-4 text-white"><span class="text-white typed-words"></span></h1>
-                <button class="btn btn-primary mt-4" style="font-size: 1.25rem" type="button" data-toggle="modal" data-target="#registerModal">Start your Free Quarantine Trial</button>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- end of the dancing bitch --}}
-
-
-{{-- Half-Split Video section 
-<section class="ftco-about d-md-flex bg-light">
-
-    <div class="one-half img" style="background-image: url(images/about-2.jpg);">
-
-        <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
-
-            <span class="icon-play">
-        </a>
-    </div>
-    <div class="one-half ftco-animate">
-
-        <div class="heading-section ftco-animate">
-
-            <h3 class="subheading">About MetaLevel</h3>
-            <h2 class="mb-5">Welcome <br>To Our Gym</h2>
-        </div>
-        <div>
-
-            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-        </div>
-    </div>
-</section>
-{{-- End Half-Split Video section --}}
-
-{{-- Half-Split Regular section --}}
-
-<section class="ftco-section-services ftco-degree" id="about">
-
-    <div class="container">
-
-        <div class="row d-flex align-items-center">
-
-            <div class="col-xl-6 d-flex align-self-stretch">
-
-                <div class="align-self-stretch"><img src="images/about.jpg" class="img-fluid" style="top: 15px; position: relative;" alt=""></div>
-            </div>
-
-            <div class="col-xl-6 align-self-stretch pt-5">
-
-                <div class="row justify-content-center mb-3">
-
-                    <div class="col-md-12 heading-section ftco-animate">
-
-                        <h3 class="subheading">Shape Your Body</h3>
-                        <h2 class="mb-4">This is Your Quarantine Evolution</h2>
-                    </div>
-                </div>
-                <div class="services d-flex ftco-animate">
-
-                    <div class="icon d-flex justify-content-center align-items-center">
-
-                        <span class="flaticon-ruler"></span>
-                    </div>
-                    <div class="text ml-5">
-
-                        <h3>Analyze Your Goal</h3>
-                        <p>Build your profile with your own specific goals, our programs adapt to what you want them to be! Set your goals and your level</p>
-                    </div>
-                </div>
-                <div class="services d-flex ftco-animate">
-
-                    <div class="icon d-flex justify-content-center align-items-center">
-
-                        <span class="flaticon-gym"></span>
-                    </div>
-                    <div class="text ml-5">
-
-                        <h3>Work Hard On It</h3>
-                        <p>We offer a lot of programs for our DIY savvy people, and we also connect you to trainers and nutritionists for hands-on work!</p>
-                    </div>
-                </div>
-                <div class="services d-flex ftco-animate">
-
-                    <div class="icon d-flex justify-content-center align-items-center">
-
-                        <span class="flaticon-tools-and-utensils"></span>
-                    </div>
-                    <div class="text ml-5">
-
-                        <h3>Improve Your Performance</h3>
-                        <p>Track your progress and work with trainers and nutritionists to understand how to progress naturally towards your dream body</p>
-                    </div>
-                </div>
-                <div class="services d-flex ftco-animate">
-
-                    <div class="icon d-flex justify-content-center align-items-center">
-
-                        <span class="flaticon-abs"></span>
-                    </div>
-                    <div class="text ml-5">
-
-                        <h3>Achieve Your Perfect Body</h3>
-                        <p>Actualize your potential, bring out your final form! Love who you are and fall in love with feeling the best you've ever felt</p>
-                    </div>
+                    <h1 id="main-page-hero-text" class="mt-4 text-white"><span class="text-white typed-words"></span></h1>
+                    <button class="btn btn-primary mt-4" style="font-size: 1.25rem" type="button" data-toggle="modal" data-target="#registerModal">Begin your Journey</button>
                 </div>
             </div>
         </div>
     </div>
-</section>
-{{-- End Half-Split Regular --}}
+    {{-- end of the hero video --}}
+
+
+    {{-- Half-Split Video section - not in use until we get a good promo video
+    <section class="ftco-about d-md-flex bg-light">
+
+        <div class="one-half img" style="background-image: url(images/about-2.jpg);">
+
+            <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+
+                <span class="icon-play">
+            </a>
+        </div>
+        <div class="one-half ftco-animate">
+
+            <div class="heading-section ftco-animate">
+
+                <h3 class="subheading">About MetaLevel</h3>
+                <h2 class="mb-5">Welcome <br>To Our Gym</h2>
+            </div>
+            <div>
+
+                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+            </div>
+        </div>
+    </section>
+    {{-- End Half-Split Video section --}}
+
+    {{-- Half-Split Regular section --}}
+    <section class="ftco-section-services ftco-degree" id="about">
+
+        <div class="container">
+
+            <div class="row d-flex align-items-center">
+
+                <div class="d-none d-xl-flex col-xl-6 align-self-stretch">
+
+                    <div class="align-self-stretch"><img src="images/about.jpg" class="img-fluid" style="top: 15px; position: relative;" alt=""></div>
+                </div>
+
+                <div class="col-xl-6 align-self-stretch pt-5">
+
+                    <div class="row justify-content-center mb-3">
+
+                        <div class="col-md-12 heading-section ftco-animate">
+
+                            <h3 class="subheading">Shape Your Body</h3>
+                            <h2 class="mb-4">This is Your Quarantine Evolution</h2>
+                        </div>
+                    </div>
+                    <div class="services d-flex ftco-animate">
+
+                        <div class="icon d-flex justify-content-center align-items-center">
+
+                            <span class="flaticon-ruler"></span>
+                        </div>
+                        <div class="text ml-5">
+
+                            <h3>Analyze Your Goal</h3>
+                            <p>Build your profile with your own specific goals, our programs adapt to what you want them to be! Set your goals and your level</p>
+                        </div>
+                    </div>
+                    <div class="services d-flex ftco-animate">
+
+                        <div class="icon d-flex justify-content-center align-items-center">
+
+                            <span class="flaticon-gym"></span>
+                        </div>
+                        <div class="text ml-5">
+
+                            <h3>Work Hard On It</h3>
+                            <p>We offer a lot of programs for our DIY savvy people, and we also connect you to trainers and nutritionists for hands-on work!</p>
+                        </div>
+                    </div>
+                    <div class="services d-flex ftco-animate">
+
+                        <div class="icon d-flex justify-content-center align-items-center">
+
+                            <span class="flaticon-tools-and-utensils"></span>
+                        </div>
+                        <div class="text ml-5">
+
+                            <h3>Improve Your Performance</h3>
+                            <p>Track your progress and work with trainers and nutritionists to understand how to progress naturally towards your dream body</p>
+                        </div>
+                    </div>
+                    <div class="services d-flex ftco-animate">
+
+                        <div class="icon d-flex justify-content-center align-items-center">
+
+                            <span class="flaticon-abs"></span>
+                        </div>
+                        <div class="text ml-5">
+
+                            <h3>Achieve Your Perfect Body</h3>
+                            <p>Actualize your potential, bring out your final form! Love who you are and fall in love with feeling the best you've ever felt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- End Half-Split Regular --}}
 
 {{-- The fucking metrics section --}}
 <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_2.jpg);" data-stellar-background-ratio="0.5">

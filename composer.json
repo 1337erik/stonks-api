@@ -12,7 +12,7 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
-        "laravel/cashier": "^11.2",
+        "laravel/cashier-paddle": "^1.0@beta",
         "laravel/framework": "^7.0",
         "laravel/horizon": "^4.2",
         "laravel/sanctum": "^2.1",

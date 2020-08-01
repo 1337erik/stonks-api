@@ -7,12 +7,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Cashier\Billable;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasApiTokens, Billable, SoftDeletes;
+    use Notifiable, HasApiTokens, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -80,6 +79,14 @@ class User extends Authenticatable
     public function goals()
     {
         return $this->hasMany( Goal::class );
+    }
+
+    /**
+     * 
+     */
+    public function posts()
+    {
+        return $this->hasMany( Post::class );
     }
 
     /**
