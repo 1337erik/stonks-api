@@ -17,7 +17,7 @@ Route::get( '/', 'HomeController@index' )->name( 'homebase' );
 
 Route::group([ 'middleware' => [ 'auth' ]], function () {
 
-    Route::resource( 'posts', 'PostController' ); // TODO: address this, exclude some
+    Route::resource( 'transactions', 'TransactionController' ); // TODO: address this, exclude some
 });
 
 // Auth::routes();

@@ -8,13 +8,10 @@ class Role extends Model
 {
     protected $guarded = [];
 
+    // TODO add roles to its own enum
     const GOD = 'god';
-    const ADMIN = 'admin';
-    const COACH = 'coach';
-    const AUTHOR = 'author';
-    const MODERATOR = 'moderator';
-    const EDITOR = 'editor';
-    const USER = 'user';
+    const AFFILIATE = 'affiliate';
+    const INVESTOR = 'investor';
 
     /**
      * Return the white-list of possible roles
@@ -24,13 +21,10 @@ class Role extends Model
     public static function allRoles()
     {
         return [
+
             self::GOD,
-            self::ADMIN,
-            self::COACH,
-            self::AUTHOR,
-            self::MODERATOR,
-            self::EDITOR,
-            self::USER
+            self::AFFILIATE,
+            self::INVESTOR,
         ];
     }
 

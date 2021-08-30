@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Stripe\Account;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,8 +18,10 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             PermissionSeeder::class,
             UserSeeder::class,
-            GoalSeeder::class,
-            PostSeeder::class,
+            CoinSeeder::class,
+            FarmSeeder::class,
+            TransactionSeeder::class,
+            AccountSeeder::class
         ]);
     }
 }

@@ -6,6 +6,7 @@ use App\Goal;
 use App\User;
 
 class GoalManager {
+    // TODO can definitely use this as a model for how to unify all maangers with a basic CRUD task trait
 
     /**
      * 

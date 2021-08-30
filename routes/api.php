@@ -24,22 +24,15 @@ Route::group([ 'middleware' => [ 'auth:sanctum' ]], function () {
         return new UserResource( $request->user() );
     });
 
+    Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::INVESTOR, Role::AFFILIATE ]], function () {
 
-    Route::resource( 'posts', 'PostController' ); // TODO: address this, exclude some
-
-
-    Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::USER ]], function () {
-
-        Route::resource( 'information', 'InformationController' );
-        Route::resource( 'goals', 'GoalController' );
+        Route::resource( 'transactions', 'TransactionController' );
+        Route::resource( 'accounts', 'AccountController' );
     });
 
-    Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::AUTHOR ]], function () {
+    Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::GOD ]], function () {
 
+        Route::resource( 'farms', 'FarmController' );
     });
 
-    Route::group([ 'middleware' => [ 'roles' ], 'roles' => [ Role::ADMIN ]], function () {
-
-        Route::resource( 'category', 'CategoryController' ); // maybe Editors too? Moderators?
-    });
 });
