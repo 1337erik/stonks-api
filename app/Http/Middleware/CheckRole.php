@@ -27,10 +27,15 @@ class CheckRole
             $roles = strpos($roles, '|') > 0 ? explode('|', $roles) : [$roles];
         }
 
+        /**
+         * @var \App\User $user
+         */
+        $user = $request->user();
+
         // Check if a role is required for the route, and
         // if so, ensure that the user has that role.
         // God can do anything.
-        if( $request->user()->hasRole( Role::GOD ) || $request->user()->roles()->whereIn( 'type', $roles )->exists() ){
+        if( $user->hasRole( Role::GOD ) || $user->roles()->whereIn( 'type', $roles )->exists() ){
 
             return $next($request);
         }

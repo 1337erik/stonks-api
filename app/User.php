@@ -77,17 +77,17 @@ class User extends Authenticatable
     /**
      * 
      */
-    public function goals()
+    public function transactions()
     {
-        return $this->hasMany( Goal::class );
+        return $this->hasMany( Transaction::class );
     }
 
     /**
      * 
      */
-    public function posts()
+    public function accounts()
     {
-        return $this->hasMany( Post::class );
+        return $this->hasMany( Account::class );
     }
 
     /**
@@ -120,7 +120,7 @@ class User extends Authenticatable
      * 
      * @return bool
      */
-    public function hasRole( $type )
+    public function hasRole( string $type )
     {
         Role::where( 'type', $type )->firstOrFail();
         return $this->roles()->where( 'type', $type )->exists();

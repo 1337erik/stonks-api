@@ -5,7 +5,7 @@
 ////////////////////////////////////
 
 use App\Role;
-use Illuminate\Http\Request;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 function add($operand1, $operand2, $decimals=2): float
@@ -62,19 +62,82 @@ function round_to_fraction( $number, $fraction = 4, $direction = 'floor' ){
 }
 
 /**
+ * Helper function to check for common 'falsy', 'empty' or 'null' values.. i wrote this way too many times before making this helper
+ * 
+ * @param mixed $value the value to be checked
+ * @param bool $numeric add numeric values such as 0, 0.00, "0.00", "0"
+ * 
+ * @return bool
+ */
+function isFalsy( $value, $numeric = true )
+{
+    $array = [ 'false', false, null, 'null', '' ];
+    if( $numeric ) $array = array_merge( $array, [ '0', 0, 0.00, '0.00' ]);
+    return in_array( $value, $array, true );
+}
+
+/**
+ * Helper function to check for common 'truthy' values..
+ * 
+ * @param $value - the value to be checked
+ * 
+ * @return bool
+ */
+function isTruthy( $value )
+{
+    return in_array( $value, [ 'true', true, '1', 1 ], true );
+}
+
+
+/**
+ * **THIS IS THE VERSION FOR DB::TABLE SINCE IT DOESNT SUPPORT QUERY SCOPES**
+ *
+ * **REMEMBER** you cannot server-side sort through eloquent relationships, you must join the table to sort through relationships.
+ * 
+ * **FURTHERMORE** any common field-name across joins will overwrite ( especially the 'id' field ).
+ *  So make sure to manually select the correct id
+ * 
+ * @param $model
+ * @param string|null $order_by
+ * @param string|null $direction
+ * 
+ * @return \Illuminate\Database\Eloquent\Builder $builder
+ */
+function mapSort( $model, string $order_by = null, string $sort_desc = null )
+{
+    $sort_col = ( !empty( $order_by ) && array_key_exists( $order_by, $model->sortableFields() ) ) ? $model->sortableFields()[ $order_by ] : $model->sortableFields()[ $model->defaultSortBy() ];
+    $sort_dir = $sort_desc == null ? $model->defaultSortDir() : ( isTruthy( $sort_desc ) ? 'desc' : 'asc' );
+
+    return [ $sort_col, $sort_dir ];
+}
+
+/**
+ * **THIS IS THE VERSION FOR DB::TABLE SINCE IT DOESNT SUPPORT QUERY SCOPES**
  * Handy utility function to map the typical pagination controls that are on every table we use ( ideally )
  * 
- * @param Illuminate\Http\Request $request
+ * @param \Illuminate\Database\Eloquent\Builder $builder
  * @return array
  */
-function mapPagination( Request $request )
+function mapPagination( $perPage = null, $page = 1 )
 {
-    $perPage   = $request->input( 'perPage', 25 );
-    $page      = $request->input( 'page', 1 );
-    $sortOrder = $request->input( 'desc', false ) == 'true' ? 'desc' : 'asc';
-    $offset    = ( $page - 1 ) * $perPage;
-    return [ $perPage, $sortOrder, $offset ];
+    $offset = ( $page - 1 ) * $perPage;
+    return [ $perPage, $offset ];
 }
+
+// /**
+//  * Handy utility function to map the typical pagination controls that are on every table we use ( ideally )
+//  * 
+//  * @param Illuminate\Http\Request $request
+//  * @return array
+//  */
+// function mapPagination( Request $request )
+// {
+//     $perPage   = $request->input( 'perPage', 25 );
+//     $page      = $request->input( 'page', 1 );
+//     $sortOrder = $request->input( 'desc', false ) == 'true' ? 'desc' : 'asc';
+//     $offset    = ( $page - 1 ) * $perPage;
+//     return [ $perPage, $sortOrder, $offset ];
+// }
 
 /**
  * Happy String Helper, use this to stop the evil "" -> “” thing.. aka non ascii characters
@@ -184,9 +247,12 @@ function utc_date($input, $to_format='Y-m-d H:i:s', $from_timezone='America/New_
  * 
  * @return bool
  */
-function is_god(){
+function is_god( User $user = null ){
 
-    $user = Auth::user();
+    /**
+     * @var User $user
+     */
+    $user = $user ?? Auth::user();
 
     return $user->email === 'erikpwhite@gmail.com' && $user->hasRole( Role::GOD );
 }

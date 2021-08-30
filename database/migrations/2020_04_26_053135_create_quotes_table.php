@@ -8,6 +8,9 @@ class CreateQuotesTable extends Migration
 {
     /**
      * Run the migrations.
+     * 
+     * This table and model exists to provide a low-prio means of developing unifid model-management controls &
+     *  the passing of data back-and-forth from UI to API
      *
      * @return void
      */

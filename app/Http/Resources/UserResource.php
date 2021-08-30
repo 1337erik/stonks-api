@@ -30,12 +30,9 @@ class UserResource extends JsonResource
 
             // Meta
             'id'                => $this->resource->id,
-            'name'              => $this->resource->name,
+            'username'          => $this->resource->username,
             'email'             => $this->resource->email,
-            'email_verified_at' => $this->resource->email_verified_at,
-            'password'          => $this->resource->password,
             'timezone'          => $this->resource->timezone,
-            'remember_token'    => $this->resource->remember_token,
             'created_at'        => $this->resource->created_at,
             'updated_at'        => $this->resource->updated_at,
             'deleted_at'        => $this->resource->deleted_at,
